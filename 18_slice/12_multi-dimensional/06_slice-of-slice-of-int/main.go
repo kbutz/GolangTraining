@@ -1,4 +1,4 @@
-package main
+package test
 
 import (
 	"fmt"
@@ -16,4 +16,7 @@ func main() {
 		transactions = append(transactions, transaction)
 	}
 	fmt.Println(transactions)
+
+	a := TestyThing{"stuff"}
+	fmt.Println(a)
 }

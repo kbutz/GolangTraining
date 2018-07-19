@@ -39,7 +39,7 @@ func gen() <-chan int {
 func fanOut(in <-chan int, n int) []<-chan int {
 	xc := make([]<-chan int, n)
 	for i := 0; i < n; i++ {
-		xc = append(xc, factorial(in))
+		xc[i] = factorial(in)
 	}
 	return xc
 }

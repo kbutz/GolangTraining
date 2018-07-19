@@ -15,6 +15,9 @@ func main() {
 
 	fmt.Println(c1)       // {Rocky 44}
 	fmt.Println(&c1.name) // 0x8201e4120
+
+	changeString(&c1.name)
+	fmt.Println(c1)
 }
 
 func changeMe(z *customer) {
@@ -23,5 +26,14 @@ func changeMe(z *customer) {
 	z.name = "Rocky"
 	fmt.Println(z)       // &{Rocky 44}
 	fmt.Println(&z.name) // 0x8201e4120
+
+}
+
+func changeString(n *string) {
+	fmt.Println("---- change string ----")
+	fmt.Println(n)
+	fmt.Println(*n)
+	*n = "Name Change"
+
 
 }

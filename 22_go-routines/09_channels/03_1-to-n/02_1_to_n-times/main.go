@@ -11,7 +11,7 @@ func main() {
 	done := make(chan bool)
 
 	go func() {
-		for i := 0; i < 100000; i++ {
+		for i := 0; i < 10; i++ {
 			c <- i
 		}
 		close(c)
@@ -20,7 +20,7 @@ func main() {
 	for i := 0; i < n; i++ {
 		go func() {
 			for n := range c {
-				fmt.Println(n)
+				fmt.Println(i, n)
 			}
 			done <- true
 		}()

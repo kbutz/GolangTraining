@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"github.com/kbutz/GolangTraining/18_slice/12_multi-dimensional/06_slice-of-slice-of-int"
 )
+
 
 func main() {
 	var records [][]string
@@ -24,4 +26,7 @@ func main() {
 	records = append(records, student2)
 	// print
 	fmt.Println(records)
+
+	s := test.TestyThing{ Name: "oh"}
+	fmt.Println(s)
 }
